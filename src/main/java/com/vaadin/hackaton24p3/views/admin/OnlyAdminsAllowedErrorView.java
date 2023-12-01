@@ -7,9 +7,11 @@ import com.vaadin.flow.router.ErrorParameter;
 import com.vaadin.flow.router.HasErrorParameter;
 import com.vaadin.flow.router.ParentLayout;
 import com.vaadin.flow.server.HttpStatusCode;
+import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.hackaton24p3.views.MainLayout;
 
 @ParentLayout(MainLayout.class)
+@AnonymousAllowed
 public class OnlyAdminsAllowedErrorView extends VerticalLayout implements HasErrorParameter<NotAdminException> {
 
     @Override

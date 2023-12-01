@@ -13,12 +13,13 @@ Hackathon Rules
 7. Documentation: Refer to vaadin.com/docs/latest for help and information.
 
 # Worked on
-* Rerouting to custom page after access-denied - not working
+* Using the new Started as a base. 
+* Rerouting to custom page after access-denied. Ran into setup issues.
+* 
 
-# Issues
-* Starter should offer export with Security enabled.
-* No documentation for new rerouteToError in annotation? 
-
+# Issues created
+* Starter should offer export with Security enabled. [Issue] (https://github.com/vaadin/start/issues/2915)
+* Missing documentation for new rerouteToError in annotation. [Issue](https://github.com/vaadin/docs/issues/3013)
 
 
 
