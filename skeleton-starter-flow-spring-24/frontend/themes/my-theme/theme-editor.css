@@ -1,0 +1,15 @@
+/*
+ * This file has been created by the Vaadin Theme Editor. Please note that
+ * manual changes to individual CSS properties may be overwritten by the theme editor.
+ */
+vaadin-button.main-view-button-1 {
+  --lumo-button-size:var(--lumo-size-m);
+  border-radius:5px;
+  border-style:solid;
+  border-width:1px;
+}
+
+vaadin-button.main-view-button-1::part(label) {
+  font-style:italic;
+  font-weight:bold;
+}
