@@ -8,9 +8,12 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 import com.vaadin.hackaton24p3.views.MainLayout;
+import jakarta.annotation.security.PermitAll;
 
 @PageTitle("About")
 @Route(value = "about", layout = MainLayout.class)
+@PermitAll
+
 public class AboutView extends VerticalLayout {
 
     public AboutView() {
