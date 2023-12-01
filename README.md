@@ -13,7 +13,7 @@ surrounded other components that change visibility. Found strange behaviour.
 * Starter should offer export with Security enabled. [Issue](https://github.com/vaadin/start/issues/2915)
 * Missing documentation for new rerouteToError in annotation. [Issue](https://github.com/vaadin/docs/issues/3013)
 * Strange behaviour with expanding multi-select reported. [Issue](https://github.com/vaadin/web-components/issues/6897)
-* Started a [Slack discussion](https://vaadin.slack.com/archives/C066U9C34NS/p1701443840082389) about grouping of items on top. 
+* Created a feature request for custom ordering of selected items in multi-select combo box. [Issue](https://github.com/vaadin/web-components/issues/6902)
 
 ## Running the application
 
