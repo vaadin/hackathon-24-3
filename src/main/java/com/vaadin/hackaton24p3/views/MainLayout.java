@@ -21,7 +21,7 @@ import com.vaadin.flow.server.auth.AccessAnnotationChecker;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import com.vaadin.hackaton24p3.data.User;
 import com.vaadin.hackaton24p3.security.AuthenticatedUser;
-import com.vaadin.hackaton24p3.views.about.AboutView;
+import com.vaadin.hackaton24p3.views.about.MultiSelectExpandView;
 import com.vaadin.hackaton24p3.views.helloworld.HelloWorldView;
 import java.io.ByteArrayInputStream;
 import java.util.Optional;
@@ -73,8 +73,8 @@ public class MainLayout extends AppLayout {
             nav.addItem(new SideNavItem("Hello World", HelloWorldView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
 
         }
-        if (accessChecker.hasAccess(AboutView.class)) {
-            nav.addItem(new SideNavItem("About", AboutView.class, LineAwesomeIcon.FILE.create()));
+        if (accessChecker.hasAccess(MultiSelectExpandView.class)) {
+            nav.addItem(new SideNavItem("Multi Select", MultiSelectExpandView.class, LineAwesomeIcon.FILE.create()));
 
         }
 
