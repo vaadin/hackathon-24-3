@@ -59,8 +59,15 @@ public class MultiSelectExpandView extends VerticalLayout {
         var row2 = new HorizontalLayout(multiSelect2);
         row2.setWidth("600px");
 
+        var multiSelect3 = new MultiSelectComboBox<String>();
+        multiSelect3.setLabel("Grouped values");
+        multiSelect3.setSelectedItemsOnTop(true);
+        multiSelect3.setItems("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven",
+                "Twelve", "Thirteen", "Fourteen");
+        multiSelect3.setValue("Five", "Eleven", "Two");
+        var row3 = new HorizontalLayout(multiSelect3);
 
-        add(paragraph, row, buttonToggle, row2);
+        add(paragraph, row, buttonToggle, row2, row3);
 
     }
 
