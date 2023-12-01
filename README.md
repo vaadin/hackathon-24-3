@@ -7,8 +7,8 @@ Repository for the 24.3 hackathon
   Credits goes to @SebastianKuehnau that opened the Pandora Box
 * Tested the AutoCrud feature in a Hilla application running on Quarkus
   The application is in this repo and can be run using `./mvnw quarkus:dev`
-  It uses [quarkus-hilla-react]() extension and it has been developed following the
-  [quick started guide](https://github.com/mcollovati/quarkus-hilla/wiki/QuickStart-react), but using AutoCrud features.
+  It uses [quarkus-hilla-react](https://github.com/mcollovati/quarkus-hilla/) extension and it has been developed
+  following the [quick started guide](https://github.com/mcollovati/quarkus-hilla/wiki/QuickStart-react), but using AutoCrud features.
 * Proposed [PR](https://github.com/vaadin/hilla/pull/1845) to implement https://github.com/vaadin/hilla/issues/1749  
 
 ## rules
