@@ -1,5 +1,8 @@
-# hackathon-24-3
+# hackathon-24-3 - Olli
 Repository for the 24.3 hackathon
+
+- Tested new Flow default i18n; it works as advertised
+- Created a ticket for some more documentation: https://github.com/vaadin/docs/issues/3016
 
 ## rules
 Hackathon Rules
