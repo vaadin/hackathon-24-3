@@ -64,6 +64,9 @@ public class MainView extends VerticalLayout {
         upload.setAutoUpload(false);
         layout.add(upload);
 
+        LocalizedMessageInput messageInput = new LocalizedMessageInput();
+        layout.add(messageInput);
+
         return layout;
     }
 
