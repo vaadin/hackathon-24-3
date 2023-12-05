@@ -1,0 +1,173 @@
+{
+  "layouts" : [ {
+    "className" : "com.example.application.views.MainLayout",
+    "tagName" : "vaadin-app-layout",
+    "component" : "com.vaadin.flow.component.applayout.AppLayout"
+  } ],
+  "views" : [ {
+    "className" : "com.example.application.views.dashboardjava.DashboardJavaView",
+    "tagName" : "main",
+    "children" : [ {
+      "className" : "com.vaadin.flow.component.board.Board",
+      "tagName" : "vaadin-board",
+      "varName" : "board"
+    } ],
+    "route" : "dashboard-view",
+    "routeExpression" : "dashboard-view",
+    "layoutClass" : "com.example.application.views.MainLayout",
+    "gherkinTestScenarios" : "Scenario: User changes the year in the \"View events\" chart\n  When the user selects a different year from the element \"//vaadin-select[preceding-sibling::vaadin-vertical-layout/h2[text()='View events']]\" dropdown with options \"2011\" to \"2021\" in the \"View events\" section\n  Then the \"Chart\" in the \"View events\" section is updated to reflect data for the selected year\n  And no other elements are added, removed, or updated\n\nScenario: User observes service health status changes in the grid\n  When the element \"//vaadin-vertical-layout[vaadin-horizontal-layout[vaadin-vertical-layout[h2[text()='Service health']]]]//vaadin-grid\" updates with new data\n  Then the \"Span\" elements representing service health status are updated with new \"aria-label\" and \"title\" attributes reflecting the new status\n  And the \"Span\" elements have their \"theme\" attribute updated to match the new status, adding \"success\" for \"EXCELLENT\" status and \"error\" for \"FAILING\" status\n  And no other elements are added or removed in the DOM hierarchy\n\nScenario: User interacts with the response times chart\n  When the user hovers over a \"DataSeriesItem\" in the element \"//vaadin-chart[preceding-sibling::vaadin-horizontal-layout//h2[text()='Response times']]\" of type \"PIE\" in the \"Response times\" section\n  Then a tooltip is displayed showing the percentage and name of the hovered \"System\"\n  And no other elements are added, removed, or updated\n  And no changes are made to the DOM element hierarchy\n\nScenario: User views the highlights on the dashboard\n  When the element \"//vaadin-board\" containing \"Highlights\" is rendered on the dashboard\n  Then each \"Highlight\" is displayed with a \"H2\" title, a \"Span\" for the value, and a \"Span\" badge indicating the percentage change\n  And the \"Icon\" inside the \"Span\" badge reflects the direction of the change with \"ARROW_UP\" for positive and \"ARROW_DOWN\" for negative percentages\n  And the \"Span\" badge has a \"theme\" attribute that is \"badge success\" for positive, \"badge error\" for negative, and \"badge\" for no change\n  And no other elements are added, removed, or updated\n  And no changes are made to the DOM element hierarchy"
+  }, {
+    "className" : "com.example.application.views.checkoutformjava.CheckoutFormJavaView",
+    "tagName" : "div",
+    "children" : [ {
+      "className" : "com.vaadin.flow.component.html.Main",
+      "tagName" : "main",
+      "varName" : "content",
+      "children" : [ {
+        "className" : "com.vaadin.flow.component.html.Paragraph",
+        "tagName" : "p",
+        "varName" : "note",
+        "properties" : {
+          "text" : "All fields are required unless otherwise noted"
+        }
+      }, {
+        "className" : "com.vaadin.flow.component.html.UnorderedList",
+        "tagName" : "ul",
+        "varName" : "ul",
+        "children" : [ {
+          "className" : "com.vaadin.flow.component.html.Span",
+          "tagName" : "span",
+          "varName" : "priceSpan",
+          "properties" : {
+            "text" : "price"
+          }
+        }, {
+          "className" : "com.vaadin.flow.component.html.Span",
+          "tagName" : "span",
+          "varName" : "priceSpan",
+          "properties" : {
+            "text" : "price"
+          }
+        }, {
+          "className" : "com.vaadin.flow.component.html.Span",
+          "tagName" : "span",
+          "varName" : "priceSpan",
+          "properties" : {
+            "text" : "price"
+          }
+        } ]
+      } ]
+    } ],
+    "route" : "checkout-form-view",
+    "routeExpression" : "checkout-form-view",
+    "layoutClass" : "com.example.application.views.MainLayout",
+    "gherkinTestScenarios" : "Scenario: User selects a country that triggers the state selection to appear\n  When the user selects \"United States\" from the element \"//vaadin-combo-box[label='Country']\"\n  Then the \"State\" combo box with label \"State\" should be added to the DOM and become visible\n\nScenario: User selects a country that hides the state selection\n  Given the \"State\" combo box with label \"State\" is visible\n  When the user selects \"Canada\" from the element \"//vaadin-combo-box[label='Country']\"\n  Then the \"State\" combo box with label \"State\" should be removed from the DOM or hidden\n\nScenario: User checks the 'Remember personal details for next time' checkbox\n  When the user checks the checkbox with label \"//vaadin-checkbox[label='Remember personal details for next time']/input\"\n  Then the checkbox with label \"Remember personal details for next time\" should be updated to a checked state\n\nScenario: User unchecks the 'Remember personal details for next time' checkbox\n  Given the checkbox with label \"Remember personal details for next time\" is checked\n  When the user unchecks the checkbox with label \"Remember personal details for next time\"\n  Then the checkbox with label \"Remember personal details for next time\" should be updated to an unchecked state\n\nScenario: User checks the 'Billing address is the same as shipping address' checkbox\n  When the user checks the checkbox with label \"Billing address is the same as shipping address\"\n  Then the checkbox with label \"Billing address is the same as shipping address\" should be updated to a checked state\n\nScenario: User unchecks the 'Billing address is the same as shipping address' checkbox\n  Given the checkbox with label \"Billing address is the same as shipping address\" is checked\n  When the user unchecks the checkbox with label \"Billing address is the same as shipping address\"\n  Then the checkbox with label \"Billing address is the same as shipping address\" should be updated to an unchecked state\n\nScenario: User checks the 'Remember address for next time' checkbox\n  When the user checks the checkbox with label \"//vaadin-checkbox[label='Remember address for next time']/input\"\n  Then the checkbox with label \"Remember address for next time\" should be updated to a checked state\n\nScenario: User unchecks the 'Remember address for next time' checkbox\n  Given the checkbox with label \"Remember address for next time\" is checked\n  When the user unchecks the checkbox with label \"Remember address for next time\" \"//vaadin-checkbox[label='Remember address for next time']/input\"\n  Then the checkbox with label \"Remember address for next time\" should be updated to an unchecked state\n\nScenario: User clicks the 'Cancel order' button\n  When the user clicks the element \"//vaadin-button[.//text()='Cancel order']\"\n  Then the action to cancel the order should be triggered\n\nScenario: User clicks the 'Pay securely' button\n  When the user clicks the element \"//vaadin-button[.//vaadin-icon[@icon='vaadin:lock']]\"\n  Then the action to process the payment securely should be triggered\n\nScenario: User edits the order from the aside section\n  When the user clicks the button \"//aside/header/vaadin-button\" in the header of the aside section\n  Then the action to edit the order should be triggered and the order form should become editable"
+  }, {
+    "className" : "com.example.application.views.helloworldjava.HelloWorldJavaView",
+    "tagName" : "vaadin-horizontal-layout",
+    "children" : [ {
+      "className" : "com.vaadin.flow.component.textfield.TextField",
+      "tagName" : "vaadin-text-field",
+      "varName" : "name",
+      "properties" : {
+        "label" : "Your name"
+      },
+      "field" : true
+    }, {
+      "className" : "com.vaadin.flow.component.button.Button",
+      "tagName" : "vaadin-button",
+      "varName" : "sayHello",
+      "listeners" : [ {
+        "eventMethod" : "addClickListener",
+        "eventName" : "click"
+      } ],
+      "properties" : {
+        "text" : "Say hello"
+      }
+    } ],
+    "route" : "hello-world-view",
+    "routeExpression" : "hello-world-view",
+    "layoutClass" : "com.example.application.views.MainLayout"
+  } ],
+  "components" : [ {
+    "className" : "com.example.application.views.gridwithfiltersjava.GridwithFiltersJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.checkoutformjava.CheckoutFormJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.collaborativemasterdetailsampleaddressjava.CollaborativeMasterDetailSampleAddressJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.collaborativemasterdetailsamplebookjava.CollaborativeMasterDetailSampleBookJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.feedjava.FeedJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.datagridjava.DataGridJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.imagegalleryjava.ImageGalleryJavaView",
+    "tagName" : "main"
+  }, {
+    "className" : "com.example.application.views.collaborativemasterdetailjava.CollaborativeMasterDetailJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.masterdetailsamplebookjava.MasterDetailSampleBookJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.imagegalleryjava.ImageGalleryJavaViewCard",
+    "tagName" : "li"
+  }, {
+    "className" : "com.example.application.views.chatjava.ChatJavaView",
+    "tagName" : "vaadin-horizontal-layout"
+  }, {
+    "className" : "com.example.application.views.dashboardjava.DashboardJavaView",
+    "tagName" : "main"
+  }, {
+    "className" : "com.example.application.views.spreadsheetjava.SpreadsheetJavaView",
+    "tagName" : "vaadin-vertical-layout"
+  }, {
+    "className" : "com.example.application.views.emptyjava.EmptyJavaView",
+    "tagName" : "vaadin-vertical-layout"
+  }, {
+    "className" : "com.example.application.views.creditcardformjava.CreditCardFormJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.addressformjava.AddressFormJavaView",
+    "tagName" : "vaadin-vertical-layout"
+  }, {
+    "className" : "com.example.application.views.pageeditorjava.PageEditorJavaView",
+    "tagName" : "main"
+  }, {
+    "className" : "com.example.application.views.mapjava.MapJavaView",
+    "tagName" : "vaadin-horizontal-layout"
+  }, {
+    "className" : "com.example.application.views.masterdetailsampleaddressjava.MasterDetailSampleAddressJavaView",
+    "tagName" : "div"
+  }, {
+    "className" : "com.example.application.views.helloworldjava.HelloWorldJavaView",
+    "tagName" : "vaadin-horizontal-layout"
+  }, {
+    "className" : "com.example.application.views.myviewjava.MyViewJavaView",
+    "tagName" : "vaadin-vertical-layout"
+  }, {
+    "className" : "com.example.application.views.login.LoginView",
+    "tagName" : "vaadin-login-overlay"
+  }, {
+    "className" : "com.example.application.views.personformjava.PersonFormJavaView",
+    "tagName" : "vaadin-vertical-layout"
+  }, {
+    "className" : "com.example.application.views.masterdetailjava.MasterDetailJavaView",
+    "tagName" : "div"
+  } ],
+  "login" : {
+    "loginUrl" : "login",
+    "login" : "admin",
+    "password" : "admin",
+    "loginSelector" : "vaadin-text-field",
+    "passwordSelector" : "vaadin-password-field",
+    "buttonSelector" : "vaadin-button"
+  }
+}
