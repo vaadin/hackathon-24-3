@@ -1,0 +1,17 @@
+@import url('./main-layout.css');
+@import url('./views/my-view-java-view.css');
+@import url('./views/dashboard-java-view.css');
+@import url('./views/feed-java-view.css');
+@import url('./views/data-grid-java-view.css');
+@import url('./views/master-detail-java-view.css');
+@import url('./views/master-detail-sample-address-java-view.css');
+@import url('./views/master-detail-sample-book-java-view.css');
+@import url('./views/collaborative-master-detail-java-view.css');
+@import url('./views/collaborative-master-detail-sample-address-java-view.css');
+@import url('./views/collaborative-master-detail-sample-book-java-view.css');
+@import url('./views/credit-card-form-java-view.css');
+@import url('./views/map-java-view.css');
+@import url('./views/chat-java-view.css');
+@import url('./views/image-gallery-java-view.css');
+@import url('./views/checkout-form-java-view.css');
+@import url('./views/gridwith-filters-java-view.css');
